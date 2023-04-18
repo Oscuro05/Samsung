@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Circle with Hidden Divs</title>
+    <style>
+      .circle {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background-color: lightblue;
+        position: relative;
+        margin: 50px auto;
+      }
+      
+      .name, .dis, .pro, .bat, .cam {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: white;
+        text-align: center;
+        line-height: 80px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: transform 0.5s ease-in-out;
+        transform: rotate(-72deg) translateY(-160px) rotate(72deg);
+      }
+      
+      .name {
+        transform: rotate(0deg) translateY(-160px) rotate(0deg);
+      }
+      
+      .dis {
+        transform: rotate(72deg) translateY(-160px) rotate(-72deg);
+      }
+      
+      .pro {
+        transform: rotate(144deg) translateY(-160px) rotate(-144deg);
+      }
+      
+      .bat {
+        transform: rotate(216deg) translateY(-160px) rotate(-216deg);
+      }
+      
+      .cam {
+        transform: rotate(288deg) translateY(-160px) rotate(-288deg);
+      }
+      
+      .name:not(.visible), 
+      .dis:not(.visible), 
+      .pro:not(.visible), 
+      .bat:not(.visible), 
+      .cam:not(.visible) {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle">
+      <div class="name visible">Name</div>
+      <div class="dis">Dis</div>
+      <div class="pro">Pro</div>
+      <div class="bat">Bat</div>
+      <div class="cam">Cam</div>
+    </div>
+    
+    <script>
+      function showDivs() {
+        var degree = Math.floor((Math.random() * 5)) * 72;
+        var divs = document.querySelectorAll('.name, .dis, .pro, .bat, .cam');
+        for (var i = 0; i < divs.length; i++) {
+          divs[i].classList.remove('visible');
+        }
+        var div = document.querySelector('.circle .name');
+        switch (degree) {
+          case 0:
+            div = document.querySelector('.circle .name');
+            break;
+          case 72:
+            div = document.querySelector('.circle .dis');
+            break;
+          case 144:
+            div = document.querySelector('.circle .pro');
+            break;
+          case 216:
+            div = document.querySelector('.circle .bat');
+            break;
+          case 288:
+            div = document.querySelector('.circle .cam');
+            break;
+        }
+        div.classList.add('visible');
+      }
+      
+      setInterval(showDivs, 3000);
+    </script>
+  </body>
+</html>

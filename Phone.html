@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Phone.css">
+    <link rel = "icon" href = "carousel1.avif" type = "image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+    
+    <title>Phones</title>
+</head>
+
+  <body>
+
+<div class="carousel-container">
+
+     <div class="carousel-slide">
+
+        <img class="five" src="carousel5.jpg" alt="" id="lastClone">
+
+        <img class="one" src="carousel1.avif" alt="">
+      
+        <img class="two" src="carousel2.webp" alt="">
+
+        <img class="three" src="carousel3.webp" alt="">
+
+        <img class="four" src="carousel4.png" alt="">
+
+        <img class="five" src="carousel5.jpg" alt="">
+
+        <img class="one" src="carousel1.avif" alt="" id="firstClone">
+
+    </div>
+
+    <div class="logo">
+       <img src="samsung2.png">
+    </div>
+
+    
+
+  <!-- <div class="carousel-slide"> -->
+
+    <!-- <div class="carousel-item">
+      <img class="five" src="carousel5.jpg" alt="">
+      <div class="name">
+        <h1 class="fold">Galaxy Z Fold 4</h1>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img class="one" src="carousel1.avif" alt="">
+      <div class="name Ultra">
+        <h1 class=" white">Galaxy S23 Ultra</h1>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img class="two" src="carousel2.webp" alt="">
+      <div class="name">
+        <h1 class="plus white">Galaxy S23|S23+</h1>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img class="three" src="carousel3.webp" alt="">
+      <div class="name">
+        <h1 class="book">Galaxy Book3 Series</h1>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img class="four" src="carousel4.png" alt="">
+      <div class="name">
+        <h1 class="flip">Galaxy Z Flip 4</h1>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img class="five" src="carousel5.jpg" alt="">
+      <div class="name">
+        <h1 class="fold">Galaxy Z Fold 4</h1>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img class="one" src="carousel1.avif" alt="">
+      <div class="name">
+        <h1 class="Ultra white">Galaxy S23 Ultra</h1>
+      </div>
+    </div> -->
+
+  <!-- </div> -->
+
+</div>
+
+      
+      
+      <!-- <div class="carousel-slide">
+
+        <img class="five" src="carousel5.jpg" alt="" id="lastClone">
+
+        <img class="one" src="carousel1.avif" alt="">
+      
+        <img class="two" src="carousel2.webp" alt="">
+
+        <img class="three" src="carousel3.webp" alt="">
+
+        <img class="four" src="carousel4.png" alt="">
+
+        <img class="five" src="carousel5.jpg" alt="">
+
+        <img class="one" src="carousel1.avif" alt="" id="firstClone">
+
+      </div>
+
+      <div class="name">
+
+        <h1 class="fold"> Galaxy Z Fold 4</h1>
+ 
+        <h1 class="Ultra white"> Galaxy S23 Ultra</h1>
+
+        <h1 class="plus white"> Galaxy S23|S23+</h1>
+
+        <h1 class="book"> Galaxy Book3 Series</h1>
+
+        <h1 class="flip"> Galaxy Z Flip 4</h1>
+
+        <h1 class="fold"> Galaxy Z Fold 4</h1>
+
+        <h1 class="Ultra white"> Galaxy S23 Ultra</h1> -->
+
+        
+
+
+      </div>
+    </div>
+
+    <img src="prevbtn.png" id="prevbtn">
+    <img src="nextbtn.png" id="nextbtn">
+
+    <script>
+
+      // const carouselSlide = document.querySelector('.carousel-slide')
+      // const carouselImages = document.querySelectorAll('.carousel-slide .carousel-item');
+
+      // //buttons
+      // const prevbtn = document.querySelector('#prevbtn');
+      // const nextbtn = document.querySelector('#nextbtn');
+
+      // //counter
+      // let counter = 1;
+      // const size = carouselImages[0].clientWidth;
+
+      // carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+      // //button listeners
+
+      // nextbtn.addEventListener('click', () => {
+      //   if(counter >= carouselImages.length - 1) return;
+      //   carouselSlide.style.transition = "transform 0.4s ease-in-out";
+      //   counter++;
+      //   carouselSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
+      // });
+
+      // prevbtn.addEventListener('click', () => {
+      //   if(counter <= 0) return;
+      //   carouselSlide.style.transition = "transform 0.4s ease-in-out";
+      //   counter--;
+      //   carouselSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
+      // });
+
+      // carouselSlide.addEventListener('transitionend', () =>{
+      //   if(carouselImages[counter].id === 'lastClone'){
+      //     carouselSlide.style.transition = 'none';
+      //     counter = carouselImages.length - 2;
+      //     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      //   }
+
+      //   if(carouselImages[counter].id === 'firstClone') {
+      //     carouselSlide.style.transition = 'none';
+      //     counter = carouselImages.length - counter;
+      //     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      //   }
+      // });
+
+      // const ultra = document.querySelector('.name ultra');
+      // const plus = document.querySelector('.name plus');
+      // const book = document.querySelector('.name book');
+      // const flip = document.querySelector('.name flip');
+      // const fold = document.querySelector('.name fold');
+
+      // const image = document.querySelector('.carousel-slide one');
+      // console.log(image);
+      // if(image.style.display != 'none'){
+      //   plus.style.display = 'none';
+      //   book.style.display = 'none';
+      //   flip.style.display = 'none';
+      //   fold.style.display = 'none';
+      // };
+
+      const carouselSlide = document.querySelector('.carousel-slide')
+      const carouselImages = document.querySelectorAll('.carousel-slide img');
+
+      //buttons
+      const prevbtn = document.querySelector('#prevbtn');
+      const nextbtn = document.querySelector('#nextbtn');
+
+      //counter
+      let counter = 1;
+      const size = carouselImages[0].clientWidth;
+
+      carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+      //button listeners
+
+      nextbtn.addEventListener('click', () => {
+        if(counter >= carouselImages.length - 1) return;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter++;
+        carouselSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
+      });
+
+      prevbtn.addEventListener('click', () => {
+        if(counter <= 0) return;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter--;
+        carouselSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
+      });
+
+      carouselSlide.addEventListener('transitionend', () =>{
+        if(carouselImages[counter].id === 'lastClone'){
+          carouselSlide.style.transition = 'none';
+          counter = carouselImages.length - 2;
+          carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+
+        if(carouselImages[counter].id === 'firstClone') {
+          carouselSlide.style.transition = 'none';
+          counter = carouselImages.length - counter;
+          carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+      });
+
+
+    </script>
+
+  </body>
+</html>
